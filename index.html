@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Local Marketplace</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+        padding-bottom: 70px;
+      }
+
+      .nav-icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+      }
+
+      .nav-icon.active {
+        background-color: rgba(13, 110, 253, 0.1);
+        color: #0d6efd !important;
+      }
+
+      .nav-icon:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      .category-icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+      }
+
+      .trending-item {
+        transition: transform 0.2s ease;
+      }
+
+      .trending-item:hover {
+        transform: translateY(-2px);
+      }
+
+      .carousel-img {
+        height: 180px; /* default: mobile */
+        object-fit: cover;
+      }
+
+      @media (min-width: 768px) {
+        .carousel-img {
+          height: 480px; /* desktop */
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <!-- ================= HEADER ================= -->
+    <header class="bg-primary text-white pb-3">
+      <div class="container pt-3">
+        <!-- Top Bar -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <h4 class="fw-bold mb-0">LocalMart</h4>
+            <small class="opacity-75">India's Local Marketplace</small>
+          </div>
+          <div>
+            <button class="btn btn-light btn-sm rounded-pill">
+              <i class="bi bi-bell"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Location & Search -->
+        <div class="row g-2 mb-3">
+          <div class="col-md-8">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-geo-alt fs-5"></i>
+              <div>
+                <div class="fw-semibold">Kanpur, Uttar Pradesh</div>
+                <small class="opacity-75">Change location</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="position-relative">
+          <i
+            class="bi bi-search position-absolute top-50 start-1 translate-middle-y text-muted"
+          ></i>
+          <input
+            type="search"
+            class="form-control form-control-lg ps-5 rounded-pill border-0 shadow"
+            placeholder="Search for products, services, jobs..."
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= HERO SLIDER ================= -->
+    <section class="mt-3">
+      <div class="container">
+        <div
+          id="heroCarousel"
+          class="carousel slide rounded-4 overflow-hidden shadow-sm"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="banner1.jpg"
+                class="w-100 d-block carousel-img"
+                alt="Dream Home"
+              />
+              <div class="carousel-caption text-start">
+                <h5 class="fw-bold">Find Your Dream Home</h5>
+                <p class="small">Verified listings near you</p>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <img
+                src="banner2.jpeg"
+                class="w-100 d-block carousel-img"
+                alt="Dream Home"
+              />
+              <div class="carousel-caption text-start">
+                <h5 class="fw-bold">Jobs That Match You</h5>
+                <p class="small">Local & remote opportunities</p>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <img
+                src="banner3.jpeg"
+                class="w-100 d-block carousel-img"
+                alt="Dream Home"
+              />
+              <div class="carousel-caption text-start">
+                <h5 class="fw-bold">Trusted Local Services</h5>
+                <p class="small">Electricians, plumbers & more</p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUICK ACTIONS ================= -->
+    <section class="py-3">
+      <div class="container">
+        <div class="row g-2">
+          <div class="col-4">
+            <div class="card border-0 shadow-sm text-center h-100">
+              <div class="card-body py-3">
+                <div
+                  class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block mb-2"
+                >
+                  <i class="bi bi-plus-lg text-primary fs-4"></i>
+                </div>
+                <h6 class="mb-0">Sell</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card border-0 shadow-sm text-center h-100">
+              <div class="card-body py-3">
+                <div
+                  class="bg-warning bg-opacity-10 rounded-circle p-3 d-inline-block mb-2"
+                >
+                  <i class="bi bi-search text-warning fs-4"></i>
+                </div>
+                <h6 class="mb-0">Find</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card border-0 shadow-sm text-center h-100">
+              <div class="card-body py-3">
+                <div
+                  class="bg-success bg-opacity-10 rounded-circle p-3 d-inline-block mb-2"
+                >
+                  <i class="bi bi-heart text-success fs-4"></i>
+                </div>
+                <h6 class="mb-0">Favorites</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED CATEGORIES ================= -->
+    <section class="py-3">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="fw-bold mb-0">Featured Categories</h5>
+          <a href="categories.html" class="text-decoration-none small"
+            >See All</a
+          >
+        </div>
+
+        <div class="row g-3">
+          <!-- Real Estate -->
+          <div class="col-6">
+            <div class="card border-0 shadow-sm h-100 trending-item">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="category-icon bg-primary bg-opacity-10 text-primary me-3"
+                  >
+                    <i class="bi bi-buildings fs-3"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Real Estate</h6>
+                    <small class="text-muted d-block">Buy, Rent, Sell</small>
+                    <small class="text-primary">456 listings</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hostels -->
+          <div class="col-6">
+            <div class="card border-0 shadow-sm h-100 trending-item">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="category-icon bg-success bg-opacity-10 text-success me-3"
+                  >
+                    <i class="bi bi-house-door fs-3"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Hostels & PG</h6>
+                    <small class="text-muted d-block"
+                      >Boys, Girls, Co-living</small
+                    >
+                    <small class="text-primary">189 listings</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="col-6">
+            <div class="card border-0 shadow-sm h-100 trending-item">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="category-icon bg-warning bg-opacity-10 text-warning me-3"
+                  >
+                    <i class="bi bi-tools fs-3"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Services</h6>
+                    <small class="text-muted d-block">Repairs, Cleaning</small>
+                    <small class="text-primary">312 listings</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jobs -->
+          <div class="col-6">
+            <div class="card border-0 shadow-sm h-100 trending-item">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="category-icon bg-danger bg-opacity-10 text-danger me-3"
+                  >
+                    <i class="bi bi-briefcase fs-3"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Jobs</h6>
+                    <small class="text-muted d-block"
+                      >Full-time, Part-time</small
+                    >
+                    <small class="text-primary">678 listings</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRENDING NEAR YOU ================= -->
+    <section class="py-3">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="fw-bold mb-0">Trending Near You</h5>
+          <a href="#" class="text-decoration-none small">View More</a>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <div
+                      class="bg-primary bg-opacity-10 rounded-3 p-3 text-center"
+                    >
+                      <i class="bi bi-buildings fs-2 text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h6 class="fw-bold mb-1">2BHK Apartment</h6>
+                    <p class="small text-muted mb-1">Civil Lines, Kanpur</p>
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="badge bg-primary bg-opacity-10 text-primary me-2"
+                        >Real Estate</span
+                      >
+                      <small class="text-success">₹ 15,000/month</small>
+                    </div>
+                  </div>
+                  <div class="col-3 text-end">
+                    <button class="btn btn-outline-primary btn-sm rounded-pill">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <div
+                      class="bg-warning bg-opacity-10 rounded-3 p-3 text-center"
+                    >
+                      <i class="bi bi-briefcase fs-2 text-warning"></i>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h6 class="fw-bold mb-1">Web Developer</h6>
+                    <p class="small text-muted mb-1">IT Company, Kanpur</p>
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="badge bg-warning bg-opacity-10 text-warning me-2"
+                        >Jobs</span
+                      >
+                      <small class="text-success">₹ 40,000/month</small>
+                    </div>
+                  </div>
+                  <div class="col-3 text-end">
+                    <button class="btn btn-outline-primary btn-sm rounded-pill">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <div
+                      class="bg-success bg-opacity-10 rounded-3 p-3 text-center"
+                    >
+                      <i class="bi bi-tools fs-2 text-success"></i>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h6 class="fw-bold mb-1">Plumbing Service</h6>
+                    <p class="small text-muted mb-1">24/7 Available</p>
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="badge bg-success bg-opacity-10 text-success me-2"
+                        >Services</span
+                      >
+                      <small class="text-success">₹ 500/service</small>
+                    </div>
+                  </div>
+                  <div class="col-3 text-end">
+                    <button class="btn btn-outline-primary btn-sm rounded-pill">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BOTTOM NAVBAR ================= -->
+    <nav class="navbar fixed-bottom bg-white border-top py-2">
+      <div class="container d-flex justify-content-around">
+        <a
+          href="index.html"
+          class="nav-icon active text-primary text-decoration-none"
+        >
+          <i class="bi bi-house-fill d-block fs-5 mb-1"></i>
+        </a>
+
+        <a
+          href="categories.html"
+          class="nav-icon text-muted text-decoration-none"
+        >
+          <i class="bi bi-grid-3x3-gap d-block fs-5 mb-1"></i>
+        </a>
+
+        <a
+          href="favorites.html"
+          class="nav-icon text-muted text-decoration-none"
+        >
+          <i class="bi bi-heart d-block fs-5 mb-1"></i>
+        </a>
+
+        <a href="saved.html" class="nav-icon text-muted text-decoration-none">
+          <i class="bi bi-bookmark d-block fs-5 mb-1"></i>
+        </a>
+
+        <a href="profile.html" class="nav-icon text-muted text-decoration-none">
+          <i class="bi bi-person d-block fs-5 mb-1"></i>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <script src="script.js"></script>
+  </body>
+</html>

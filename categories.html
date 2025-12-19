@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Categories | Explore Services</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* Minimal custom styles */
+    body {
+      background-color: #f8f9fa;
+      padding-bottom: 70px;
+    }
+    
+    .category-card {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      min-height: 130px;
+      border-radius: 16px;
+      border: none;
+      color: white;
+      overflow: hidden;
+    }
+    
+    .category-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .category-icon {
+      font-size: 2.8rem;
+      opacity: 0.9;
+    }
+    
+    .bottom-nav {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+    }
+    
+    .nav-icon.active {
+      background-color: rgba(13, 110, 253, 0.1);
+      color: #0d6efd !important;
+    }
+    
+    .nav-icon:hover {
+      background-color: rgba(0,0,0,0.05);
+    }
+    
+    .page-header {
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+<!-- ================= HEADER ================= -->
+<header class="page-header bg-primary text-white mb-4 pb-4">
+  <div class="container pt-4">
+    <div class="row align-items-center">
+      <div class="col">
+        <h1 class="h3 fw-bold mb-1">Explore Categories</h1>
+        <p class="text-white-50 mb-3">Discover services around you</p>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-light btn-sm rounded-pill px-3">
+          <i class="bi bi-filter me-1"></i> Filter
+        </button>
+      </div>
+    </div>
+    
+    <!-- Search Bar -->
+    <div class="position-relative mt-3">
+      <i class="bi bi-search position-absolute top-50 start-3 translate-middle-y text-muted"></i>
+      <input type="search" class="form-control form-control-lg ps-5 rounded-pill border-0 shadow-sm" 
+             placeholder="Search categories...">
+    </div>
+  </div>
+</header>
+
+<!-- ================= CATEGORIES GRID ================= -->
+<section class="py-2">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col">
+        <h5 class="fw-bold mb-3">Popular Categories</h5>
+      </div>
+    </div>
+    
+    <div class="row g-3">
+      <!-- Real Estate -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="category-card bg-primary bg-gradient d-flex flex-column justify-content-between p-3 shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h6 class="fw-bold mb-1">Real Estate</h6>
+              <small class="opacity-75">Buy • Rent • Lease</small>
+            </div>
+            <div class="badge bg-white bg-opacity-25">456</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-end mt-3">
+            <div class="category-icon">
+              <i class="bi bi-buildings"></i>
+            </div>
+            <small class="opacity-75">
+              <i class="bi bi-arrow-right-circle"></i>
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hostels -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="category-card bg-success bg-gradient d-flex flex-column justify-content-between p-3 shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h6 class="fw-bold mb-1">Hostels & PG</h6>
+              <small class="opacity-75">Boys • Girls</small>
+            </div>
+            <div class="badge bg-white bg-opacity-25">189</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-end mt-3">
+            <div class="category-icon">
+              <i class="bi bi-house-door"></i>
+            </div>
+            <small class="opacity-75">
+              <i class="bi bi-arrow-right-circle"></i>
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="category-card bg-warning text-dark d-flex flex-column justify-content-between p-3 shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h6 class="fw-bold mb-1">Services</h6>
+              <small class="opacity-75">Daily • Professional</small>
+            </div>
+            <div class="badge bg-dark bg-opacity-25">312</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-end mt-3">
+            <div class="category-icon">
+              <i class="bi bi-tools"></i>
+            </div>
+            <small class="opacity-75">
+              <i class="bi bi-arrow-right-circle"></i>
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jobs -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="category-card bg-danger bg-gradient d-flex flex-column justify-content-between p-3 shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h6 class="fw-bold mb-1">Jobs</h6>
+              <small class="opacity-75">Full • Part • Remote</small>
+            </div>
+            <div class="badge bg-white bg-opacity-25">678</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-end mt-3">
+            <div class="category-icon">
+              <i class="bi bi-briefcase"></i>
+            </div>
+            <small class="opacity-75">
+              <i class="bi bi-arrow-right-circle"></i>
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="category-card bg-info bg-gradient d-flex flex-column justify-content-between p-3 shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h6 class="fw-bold mb-1">Education</h6>
+              <small class="opacity-75">Courses • Tutoring</small>
+            </div>
+            <div class="badge bg-white bg-opacity-25">124</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-end mt-3">
+            <div class="category-icon">
+              <i class="bi bi-mortarboard"></i>
+            </div>
+            <small class="opacity-75">
+              <i class="bi bi-arrow-right-circle"></i>
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vehicles -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="category-card bg-dark bg-gradient d-flex flex-column justify-content-between p-3 shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h6 class="fw-bold mb-1">Vehicles</h6>
+              <small class="opacity-75">Buy • Sell • Rent</small>
+            </div>
+            <div class="badge bg-white bg-opacity-25">233</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-end mt-3">
+            <div class="category-icon">
+              <i class="bi bi-car-front"></i>
+            </div>
+            <small class="opacity-75">
+              <i class="bi bi-arrow-right-circle"></i>
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Events -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="category-card bg-purple bg-gradient d-flex flex-column justify-content-between p-3 shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h6 class="fw-bold mb-1">Events</h6>
+              <small class="opacity-75">Concerts • Workshops</small>
+            </div>
+            <div class="badge bg-white bg-opacity-25">78</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-end mt-3">
+            <div class="category-icon">
+              <i class="bi bi-calendar-event"></i>
+            </div>
+            <small class="opacity-75">
+              <i class="bi bi-arrow-right-circle"></i>
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marketplace -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="category-card bg-secondary bg-gradient d-flex flex-column justify-content-between p-3 shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h6 class="fw-bold mb-1">Marketplace</h6>
+              <small class="opacity-75">Buy & Sell</small>
+            </div>
+            <div class="badge bg-white bg-opacity-25">541</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-end mt-3">
+            <div class="category-icon">
+              <i class="bi bi-cart"></i>
+            </div>
+            <small class="opacity-75">
+              <i class="bi bi-arrow-right-circle"></i>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RECENTLY VIEWED ================= -->
+<section class="py-3">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col">
+        <h5 class="fw-bold mb-0">Recently Viewed</h5>
+      </div>
+      <div class="col-auto">
+        <a href="#" class="text-decoration-none small">See All</a>
+      </div>
+    </div>
+    
+    <div class="row g-2">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <div class="d-flex">
+              <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
+                <i class="bi bi-buildings text-primary fs-5"></i>
+              </div>
+              <div class="flex-grow-1">
+                <h6 class="fw-bold mb-1">2BHK Apartment</h6>
+                <p class="small text-muted mb-1">Downtown • $1,200/month</p>
+                <span class="badge bg-primary bg-opacity-10 text-primary">Real Estate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <div class="d-flex">
+              <div class="bg-warning bg-opacity-10 rounded p-2 me-3">
+                <i class="bi bi-briefcase text-warning fs-5"></i>
+              </div>
+              <div class="flex-grow-1">
+                <h6 class="fw-bold mb-1">Web Developer</h6>
+                <p class="small text-muted mb-1">Remote • Full-time</p>
+                <span class="badge bg-warning bg-opacity-10 text-warning">Jobs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <div class="d-flex">
+              <div class="bg-success bg-opacity-10 rounded p-2 me-3">
+                <i class="bi bi-tools text-success fs-5"></i>
+              </div>
+              <div class="flex-grow-1">
+                <h6 class="fw-bold mb-1">Plumbing Service</h6>
+                <p class="small text-muted mb-1">24/7 Emergency</p>
+                <span class="badge bg-success bg-opacity-10 text-success">Services</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Spacer for bottom nav -->
+<div class="pb-5"></div>
+
+<!-- ================= BOTTOM NAVBAR ================= -->
+<nav class="bottom-nav navbar fixed-bottom bg-white border-top py-2">
+  <div class="container d-flex justify-content-around">
+    <a href="index.html" class="nav-icon text-muted text-decoration-none">
+      <i class="bi bi-house d-block fs-5 mb-1"></i>
+      
+    </a>
+    
+    <a href="categories.html" class="nav-icon active text-primary text-decoration-none">
+      <i class="bi bi-grid-3x3-gap-fill d-block fs-5 mb-1"></i>
+    
+    </a>
+    
+    <a href="favorites.html" class="nav-icon text-muted text-decoration-none">
+      <i class="bi bi-heart d-block fs-5 mb-1"></i>
+      
+    </a>
+    
+    <a href="saved.html" class="nav-icon text-muted text-decoration-none">
+      <i class="bi bi-bookmark d-block fs-5 mb-1"></i>
+      
+    </a>
+    
+    <a href="profile.html" class="nav-icon text-muted text-decoration-none">
+      <i class="bi bi-person d-block fs-5 mb-1"></i>
+      
+    </a>
+  </div>
+</nav>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Inline style for purple color -->
+<style>
+  .bg-purple {
+    background-color: #6f42c1 !important;
+  }
+  
+  .bg-gradient {
+    background-image: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, transparent 100%) !important;
+  }
+</style>
+
+ 
+    <script src="script.js"></script>
+</body>
+</html>
